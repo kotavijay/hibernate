@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;
+            databaseName=hibernate</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">Admin@123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <mapping class="com.sample.Employee"></mapping>
+    </session-factory>
+
+</hibernate-configuration>
